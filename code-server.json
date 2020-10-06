@@ -10,6 +10,7 @@
         "libsecret",
         "libx11",
         "libinotify",
+        "libxkbfile",
         "yq"
     ],
     "properties": {
