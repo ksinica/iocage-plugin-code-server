@@ -9,6 +9,7 @@
         "pkgconf",
         "libsecret",
         "libx11",
+        "libinotify",
         "yq"
     ],
     "properties": {
