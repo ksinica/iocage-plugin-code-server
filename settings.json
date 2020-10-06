@@ -1,0 +1,13 @@
+{
+	"servicerestart":"service nginx restart",
+	"serviceget": "/usr/local/bin/pluginget",
+	"serviceset": "/usr/local/bin/pluginset",
+	"options": {
+		"password": {
+			"type": "string",
+			"name": "Password",
+			"description": "Password",
+			"readonly": true
+		}
+	}
+}

@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# PROVIDE: code_server
+# REQUIRE: LOGIN nginx
+# KEYWORD: shutdown
+
+# code_server_enable="yes"
+
+. /etc/rc.subr
+
+name="code_server"
+rcvar=code_server_enable
+
+start_cmd=code_server_start
+stop_cmd=code_server_stop
+
+load_rc_config ${name}
+
+code_server_start()
+{
+    daemon -f -p /var/run/code_server.pid code-server
+    if [ $? -ne 0 ]; then
+        echo "Error starting code-server"
+        exit 1
+    fi
+    echo "Starting code-server"
+}
+
+code_server_stop()
+{
+    echo "Stopping code-server"
+    kill -STOP `cat $code_server_pid`
+}
+
+run_rc_command "$1"
