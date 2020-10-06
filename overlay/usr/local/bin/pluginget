@@ -1,5 +1,5 @@
 #!/bin/sh
 
 case $1 in
-	password) yq -r .password /root/.config/code-server/config.yaml ;;
+	password) yq -r .password /home/code/.config/code-server/config.yaml ;;
 esac
