@@ -7,6 +7,7 @@
         "curl",
         "npm",
         "pkgconf",
+        "libsecret",
         "yq"
     ],
     "properties": {
