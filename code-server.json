@@ -6,7 +6,7 @@
     "pkgs": [
         "curl",
         "npm",
-        "pkg-config",
+        "pkgconf",
         "yq"
     ],
     "properties": {
