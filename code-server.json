@@ -14,7 +14,8 @@
         "libx11",
         "libinotify",
         "libxkbfile",
-        "yq"
+        "yq",
+        "openssl"
     ],
     "properties": {
         "dhcp": 1
