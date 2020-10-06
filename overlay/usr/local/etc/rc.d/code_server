@@ -19,7 +19,7 @@ load_rc_config ${name}
 code_server_start()
 {
     echo "Starting code-server..."
-    daemon -f -p /var/run/code_server.pid /usr/local/bin/code-server
+    daemon -f -p /var/run/code_server.pid node /usr/local/bin/code-server
     if [ $? -ne 0 ]; then
         echo "Error starting code-server"
         exit 1
