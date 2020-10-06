@@ -5,6 +5,8 @@
     "artifact": "https://github.com/ksinica/iocage-plugin-code-server.git",
     "pkgs": [
         "curl",
+        "git",
+        "python",
         "npm",
         "pkgconf",
         "libsecret",
