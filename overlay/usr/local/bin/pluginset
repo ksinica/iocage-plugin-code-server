@@ -1,0 +1,5 @@
+#!/bin/sh
+
+case $1 in
+	password) su - code -c "yq w ~/.config/code-server/config.yaml .password $2" ;;
+esac
