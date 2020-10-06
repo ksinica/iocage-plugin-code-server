@@ -8,6 +8,7 @@
         "npm",
         "pkgconf",
         "libsecret",
+        "libx11",
         "yq"
     ],
     "properties": {
