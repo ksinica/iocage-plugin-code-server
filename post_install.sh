@@ -13,14 +13,12 @@ openssl req \
   -subj "/CN=code-server" \
   -keyout /usr/local/etc/ssl/private/cakey.pem \
   -out /usr/local/etc/ssl/certs/cacert.crt
-openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 2048
+openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 128
 
 pw user add -n coder -m
 
 service code_server start
 service nginx start
 
-sleep 5
-
 echo "Password: $(pluginget password)" > /root/PLUGIN_INFO
-echo "Certificate: $(openssl x509 -in /usr/local/etc/ssl/certs/cacert.crt -noout -text)" >> /root/PLUGIN_INFO
+#echo "Certificate: $(openssl x509 -in /usr/local/etc/ssl/certs/cacert.crt -noout -text)" >> /root/PLUGIN_INFO
