@@ -16,9 +16,10 @@ openssl req \
 openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 128
 
 pw user add -n coder -m
+su - coder -c "mkdir ~/workspace"
 
 service code_server start
 service nginx start
 
 echo "Password: $(pluginget password)" > /root/PLUGIN_INFO
-#echo "Certificate: $(openssl x509 -in /usr/local/etc/ssl/certs/cacert.crt -noout -text)" >> /root/PLUGIN_INFO
+echo "Certificate: $(openssl x509 -in /usr/local/etc/ssl/certs/cacert.crt -noout -text)" >> /root/PLUGIN_INFO
