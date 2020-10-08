@@ -13,10 +13,10 @@ openssl req \
   -subj "/CN=code-server" \
   -keyout /usr/local/etc/ssl/private/cakey.pem \
   -out /usr/local/etc/ssl/certs/cacert.crt
-openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 2048
+openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 128
 
 pw user add -n coder -m
-su - coder -c "mkdir ~/workspace"
+su - coder -c "mkdir -p ~/workspace"
 
 service code_server start
 service nginx start
