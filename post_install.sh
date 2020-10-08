@@ -13,7 +13,7 @@ openssl req \
   -subj "/CN=code-server" \
   -keyout /usr/local/etc/ssl/private/cakey.pem \
   -out /usr/local/etc/ssl/certs/cacert.crt
-openssl dhparam -out /usr/local/etc/ssl/certs/dhparam.pem 128
+openssl dhparam -dsaparam -out /usr/local/etc/ssl/certs/dhparam.pem 2048
 
 pw user add -n coder -m
 su - coder -c "mkdir -p ~/workspace"
